@@ -45,13 +45,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Einladung</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#intro">Einladung</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#important">Wichtiges</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#favorites">Tipps</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#favorites">Für die Schweizer</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#event-planer">Event-Planer</a>
@@ -62,7 +62,7 @@
     </nav>
 
     <!-- Header -->
-    <header class="masthead bg-primary text-white text-center">
+    <header class="masthead bg-primary text-white text-center" id="intro">
       <div class="container">
         <img class="rounded img-fluid mb-5 d-block mx-auto" src="img/salut.png" alt="">
         <h1 class=" mb-0">A little party never killed nobody!</h1>
@@ -144,17 +144,15 @@
     <!-- About Section -->
     <section class="bg-primary text-white mb-0" id="favorites">
       <div class="container">
-        <h2 class="text-center text-uppercase text-white">Favoriten</h2>
-        <hr class="star-light mb-5">
         <div class="row">
           <div class="col">
-            <img class="img-fluid" src="img/berlin.png" />
-          </div>
-          <div class="col-lg-4 mr-auto">
-            <h3>Berlin</h3>
-            <p class="lead">Gefeiert wird in Berlin.</p>
-            <p>Genauere Angaben werden über andere Wege bekannt gemacht.</p>
-          </div>
+        <h2 class="text-center text-uppercase text-white">Meine Lieblingsplätze</h2>
+        <hr class="star-light mb-5">
+      </div>
+    </div>
+        <div class="row maps-row">
+          <div class="col">
+              <div id="map"></div>
         </div>
       </div>
     </section>
@@ -210,46 +208,6 @@
     <footer class="footer text-center">
       <div class="container">
         <div class="row">
-<!--           <div class="col-md-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">Location</h4>
-            <p class="lead mb-0">2215 John Daniel Drive
-              <br>Clark, MO 65243</p>
-          </div>
-          <div class="col-md-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">Around the Web</h4>
-            <ul class="list-inline mb-0">
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-google-plus-g"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-linkedin-in"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-dribbble"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h4 class="text-uppercase mb-4">About Freelancer</h4>
-            <p class="lead mb-0">Freelance is a free to use, open source Bootstrap theme created by
-              <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-          </div> -->
         </div>
       </div>
     </footer>
@@ -277,7 +235,10 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/main.js"></script>
-
+    <script src="js/maps.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuEirFX_IT8XKd3YanQsH7ymx7xOuM14o&callback=initMap">
+    </script>
   </body>
 
 </html>

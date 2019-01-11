@@ -11,6 +11,20 @@ body {
    color: transparent;
    text-shadow: 0 0 1em rgba(0,0,0,0.5);
 }
+#map {
+  height: 100%;
+}
+
+#favorites {
+  height: 100vh;
+}
+
+#favorites .container {
+  height: 100%;
+}
+#favorites .container .maps-row {
+  height: 80%;
+}
 h1,
 h2,
 h3,
