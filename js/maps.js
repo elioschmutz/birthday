@@ -36,6 +36,9 @@ function initMap() {
   markers.map(function(marker) {
     marker.map = gmap;
     new google.maps.Marker(marker);
+    google.maps.event.addListener(marker, 'click', function() {
+      document.getElementById('map-text').textContent = marker.getTitle();
+    });
   });
 
   var areas = [
