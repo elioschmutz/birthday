@@ -33,11 +33,15 @@ function initMap() {
     {position: {lat: 52.525092, lng: 13.407505}, title:"Einer der vielen Shoppingviertel von Berlin", icon: position},
   ];
 
-  markers.map(function(marker) {
-    marker.map = gmap;
-    new google.maps.Marker(marker);
-    google.maps.event.addListener(marker, 'click', function() {
-      document.getElementById('map-text').textContent = marker.getTitle();
+  markers.map(function(marker_data) {
+    marker_data.map = gmap;
+    marker_data.clickable = true;
+    var marker = new google.maps.Marker(marker_data);
+    var infowindow = new google.maps.InfoWindow({
+     content: marker.getTitle()
+    });
+    marker.addListener('click', function() {
+     infowindow.open(map, marker);
     });
   });
 
